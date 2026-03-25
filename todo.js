@@ -60,8 +60,6 @@ Object.assign(titleStyle.style, {
 
 Object.assign(notesBackground.style, {
     backgroundColor: "rgb(34, 49, 29)",
-    width: "400px",
-    minHeight: "400px",
     marginTop: "100px",
     borderRadius: "10px",
     borderColor: "black",
@@ -75,6 +73,11 @@ Object.assign(notesBackground.style, {
 
     top: "75px",
     left: "auto",
+
+    width: "90%",       // flexible for mobile
+    maxWidth: "400px",  // limits it on desktop
+    padding: "20px",    // keeps content away from edges
+    boxSizing: "border-box", // ensures padding doesn’t increase width
 });
 
 // button styling
