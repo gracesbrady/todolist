@@ -74,10 +74,13 @@ Object.assign(notesBackground.style, {
     top: "75px",
     left: "auto",
 
-    width: "90%",       // flexible for mobile
-    maxWidth: "400px",  // limits it on desktop
-    padding: "20px",    // keeps content away from edges
-    boxSizing: "border-box", // ensures padding doesn’t increase width
+    width: "90%",      
+    maxWidth: "400px",  
+    padding: "20px",   
+    boxSizing: "border-box", 
+
+    maxHeight: "90vh",  
+    minHeight: "300px",  
 });
 
 // button styling
