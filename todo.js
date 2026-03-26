@@ -3,12 +3,17 @@ const notesBackground = document.createElement("div");
 notesBackground.classList.add("notes-background");
 document.body.appendChild(notesBackground);
 
-// saving data
-notesBackground.innerHTML = localStorage.getItem("notes") || "";
 // title
 const title = document.createElement("h1");
 title.textContent = "To-Do List";
 notesBackground.appendChild(title);
+
+// create a container just for notes
+const notesContainer = document.createElement("div");
+notesContainer.classList.add("notes-container");
+notesBackground.appendChild(notesContainer);
+
+notesContainer.innerHTML = localStorage.getItem("notes") || "";
 
 // creating button and input field
 const addButton = document.createElement("button");
@@ -25,10 +30,10 @@ addButton.addEventListener("click", function() {
     note.textContent = input.value;
     note.style.fontFamily = "Courier New, Courier, monospace";
     note.style.color = "white";
-    notesBackground.appendChild(note);
+    notesContainer.appendChild(note);
     input.value = "";
 
-    localStorage.setItem("notes", notesBackground.innerHTML);
+    localStorage.setItem("notes", notesContainer.innerHTML);
     
     note.addEventListener("click", function() {
         note.remove();
@@ -138,7 +143,7 @@ Object.assign(document.body.style, {
 document.querySelectorAll(".note").forEach(note => {
     note.addEventListener("click", function() {
         note.remove();
-        localStorage.setItem("notes", notesBackground.innerHTML);
+        localStorage.setItem("notes", notesContainer.innerHTML);
 
     });
 
