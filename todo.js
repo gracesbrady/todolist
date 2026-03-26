@@ -1,4 +1,6 @@
 // create a second background element to hold the notes
+
+localStorage.removeItem("notes");
 const notesBackground = document.createElement("div");
 notesBackground.classList.add("notes-background");
 document.body.appendChild(notesBackground);
