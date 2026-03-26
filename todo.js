@@ -80,7 +80,7 @@ Object.assign(notesBackground.style, {
     boxSizing: "border-box", 
 
     maxHeight: "90vh",  
-    minHeight: "300px",  
+    minHeight: "500px",  
 });
 
 // button styling
