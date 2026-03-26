@@ -38,7 +38,7 @@ addButton.addEventListener("click", function() {
         width: "90%",          
         maxWidth: "350px",     
         textAlign: "center",  
-        padding: "10px",
+        padding: "2px",
         borderRadius: "5px",
         boxSizing: "border-box",
     });
