@@ -93,6 +93,16 @@ Object.assign(notesBackground.style, {
     minHeight: "500px",  
 });
 
+Object.assign(notesContainer.style, {
+
+    display: flex;
+    flexDirection: column;
+    alignItems: center;
+
+
+    
+});
+
 // button styling
 Object.assign(addButton.style, {
 
