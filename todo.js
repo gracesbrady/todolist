@@ -29,10 +29,19 @@ addButton.addEventListener("click", function() {
     const note = document.createElement("div");
     note.classList.add("note");
     note.textContent = input.value;
-    note.style.fontFamily = "Courier New, Courier, monospace";
-    note.style.color = "white";
     notesContainer.appendChild(note);
     input.value = "";
+
+    Object.assign(note.style, {
+        fontFamily: "Courier New, Courier, monospace",
+        color: "white",
+        width: "90%",          
+        maxWidth: "350px",     
+        textAlign: "center",  
+        padding: "10px",
+        borderRadius: "5px",
+        boxSizing: "border-box",
+    });
 
     localStorage.setItem("notes", notesContainer.innerHTML);
     
