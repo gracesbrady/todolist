@@ -37,10 +37,10 @@ addButton.addEventListener("click", function() {
         color: "white",
         width: "90%",          
         maxWidth: "350px",     
-        textAlign: "center",  
-        padding: "2px",
+        padding: "10px",
         borderRadius: "5px",
         boxSizing: "border-box",
+        textAlign: "left"
     });
 
     localStorage.setItem("notes", notesContainer.innerHTML);
