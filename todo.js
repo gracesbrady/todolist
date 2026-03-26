@@ -1,8 +1,10 @@
-
 // create a second background element to hold the notes
 const notesBackground = document.createElement("div");
 notesBackground.classList.add("notes-background");
 document.body.appendChild(notesBackground);
+
+// saving data
+notesBackground.innerHTML = localStorage.getItem("notes") || "";
 // title
 const title = document.createElement("h1");
 title.textContent = "To-Do List";
@@ -26,6 +28,8 @@ addButton.addEventListener("click", function() {
     notesBackground.appendChild(note);
     input.value = "";
 
+    localStorage.setItem("notes", notesBackground.innerHTML);
+    
     note.addEventListener("click", function() {
         note.remove();
     });
@@ -131,3 +135,20 @@ Object.assign(document.body.style, {
     backgroundColor: "rgb(74, 103, 65)",
 });
 
+document.querySelectorAll(".note").forEach(note => {
+    note.addEventListener("click", function() {
+        note.remove();
+        localStorage.setItem("notes", notesBackground.innerHTML);
+
+    });
+
+     note.addEventListener("mouseover", function() {
+        note.style.textDecoration = "line-through";
+        note.style.textDecorationThickness = "4px";
+        note.style.textDecorationColor = "#822626";
+    });
+
+    note.addEventListener("mouseout", function() {
+        note.style.textDecoration = "none";
+    });
+});
