@@ -51,7 +51,7 @@ notesBackground.appendChild(addingContainer);
 const titleStyle = document.querySelector("h1");
 Object.assign(titleStyle.style, {
     color: "white",
-    fontSize: "2em",
+    fontSize: "40px",
     fontFamily: "Courier New, Courier, monospace",
 
 });
