@@ -1,6 +1,7 @@
 // create a second background element to hold the notes
+const oldTitles = notesContainer.querySelectorAll("h1");
+oldTitles.forEach(h => h.remove());
 
-localStorage.removeItem("notes");
 const notesBackground = document.createElement("div");
 notesBackground.classList.add("notes-background");
 document.body.appendChild(notesBackground);
