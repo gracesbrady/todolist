@@ -1,0 +1,16 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "to do app",
+  "license": "ISC",
+  "author": "grace brady",
+  "type": "commonjs",
+  "main": "todo.js",
+  "scripts": {
+    "test": "todo"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
